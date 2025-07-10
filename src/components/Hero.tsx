@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Play } from "lucide-react";
-import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -39,14 +38,8 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight"
           >
-            <ContainerTextFlip 
-              words={["LowerLift®"]}
-              interval={4000}
-              className="inline-block"
-              textClassName="bg-gradient-primary bg-clip-text text-transparent"
-            />
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              {" "}Experience
+              LowerLift® Experience
             </span>
           </motion.h1>
 
