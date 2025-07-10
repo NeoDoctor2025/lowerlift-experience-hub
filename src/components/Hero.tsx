@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Play } from "lucide-react";
 import { ContainerTextFlip } from "@/components/ui/container-text-flip";
+import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 
 export function Hero() {
-  const methodWords = ["Definitivo", "Exclusivo", "Comprovado", "Revolucionário"];
-  
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -41,8 +40,14 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight"
           >
+            <ContainerTextFlip 
+              words={["LowerLift®"]}
+              interval={4000}
+              className="inline-block"
+              textClassName="bg-gradient-primary bg-clip-text text-transparent"
+            />
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              LowerLift® Experience
+              {" "}Experience
             </span>
           </motion.h1>
 
@@ -52,13 +57,7 @@ export function Hero() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium max-w-4xl mx-auto"
           >
-            O Método{" "}
-            <ContainerTextFlip 
-              words={methodWords}
-              interval={4000}
-              className="text-xl md:text-2xl font-medium text-muted-foreground"
-            />{" "}
-            para sua Evolução na Cirurgia do Rejuvenescimento Cervical Profundo
+            O Método Definitivo para sua Evolução na Cirurgia do Rejuvenescimento Cervical Profundo
           </motion.h2>
 
           <motion.p
