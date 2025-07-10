@@ -11,6 +11,7 @@ export function FinalCTA() {
 
   return (
     <section className="py-20 bg-gradient-primary text-primary-foreground" id="final-cta">
+    <section className="py-20 bg-background text-foreground" id="final-cta">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -73,7 +74,7 @@ export function FinalCTA() {
             <Button
               onClick={handleWhatsApp}
               size="lg"
-              className="bg-white text-primary hover:bg-white/90 transition-all duration-300 text-xl px-12 py-6 h-auto group shadow-strong hover:shadow-glow"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-300 text-xl px-12 py-6 h-auto group shadow-strong hover:shadow-glow"
             >
               GARANTIR MINHA VAGA AGORA
               <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />

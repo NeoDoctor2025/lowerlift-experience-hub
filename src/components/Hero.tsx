@@ -70,7 +70,7 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-lg px-8 py-4 h-auto group"
+              className="bg-accent hover:bg-accent/90 hover:shadow-glow transition-all duration-300 text-lg px-8 py-4 h-auto group"
               onClick={() => scrollToSection("packages")}
             >
               CONHECER AS MODALIDADES

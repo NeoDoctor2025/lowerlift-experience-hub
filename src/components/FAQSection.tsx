@@ -46,7 +46,7 @@ export function FAQSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Esclarecimentos{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            <span className="text-accent">
               Frequentes
             </span>
           </h2>
@@ -107,7 +107,7 @@ export function FAQSection() {
                 const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
               }}
-              className="bg-gradient-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:shadow-glow transition-all duration-300 inline-flex items-center gap-2"
+              className="bg-accent text-accent-foreground px-8 py-3 rounded-lg font-semibold hover:shadow-glow transition-all duration-300 inline-flex items-center gap-2"
             >
               Falar com Especialista
               <span>💬</span>
