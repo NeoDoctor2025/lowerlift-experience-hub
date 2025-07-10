@@ -7,6 +7,7 @@ import AnimatedTestimonialsDemo from "@/components/animated-testimonials-demo";
 import { FAQSection } from "@/components/FAQSection";
 import { FoundersSection } from "@/components/FoundersSection";
 import { FinalCTA } from "@/components/FinalCTA";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   return (
@@ -36,8 +37,14 @@ const Index = () => {
         <FinalCTA />
       </main>
 
-      {/* WhatsApp Float Button */}
-      <div className="fixed bottom-6 right-6 z-40">
+      {/* Fixed UI Elements */}
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-4">
+        {/* Theme Toggle */}
+        <div className="flex justify-end">
+          <ThemeToggle />
+        </div>
+        
+        {/* WhatsApp Float Button */}
         <button
           onClick={() => {
             const message = "Olá! Tenho interesse na mentoria LowerLift®. Gostaria de mais informações.";
