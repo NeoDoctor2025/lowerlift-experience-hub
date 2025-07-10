@@ -45,7 +45,6 @@ const Index = () => {
             window.open(whatsappUrl, '_blank');
           }}
           className="w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-glow hover:scale-110 transition-all duration-300 flex items-center justify-center group"
-          className="w-16 h-16 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full shadow-glow hover:scale-110 transition-all duration-300 flex items-center justify-center group"
           aria-label="Contato via WhatsApp"
         >
           <span className="text-2xl group-hover:scale-110 transition-transform">💬</span>

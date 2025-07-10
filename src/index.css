@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Medical education design system - Premium, sophisticated, medical authority
+/* Medical education design system - Professional, clean, trustworthy
 All colors MUST be HSL for consistency.
 */
 
@@ -31,7 +31,7 @@ All colors MUST be HSL for consistency.
     --muted: 200 9% 69%;
     --muted-foreground: 210 14% 89%;
 
-    /* Premium gold accent */
+    /* Gold accent */
     --accent: 42 47% 69%;
     --accent-foreground: 0 0% 10%;
 
@@ -42,16 +42,16 @@ All colors MUST be HSL for consistency.
     --input: 194 100% 18%;
     --ring: 187 100% 50%;
 
-    /* Sophisticated gradients */
+    /* Dark theme gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--card)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--secondary)) 100%);
 
-    /* Refined shadows */
-    --shadow-soft: 0 4px 6px -1px hsl(var(--foreground) / 0.1);
-    --shadow-medium: 0 10px 15px -3px hsl(var(--foreground) / 0.1);
-    --shadow-strong: 0 20px 25px -5px hsl(var(--foreground) / 0.1);
-    --shadow-glow: 0 0 30px hsl(var(--accent) / 0.2);
+    /* Dark theme shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(var(--primary) / 0.2);
+    --shadow-medium: 0 10px 15px -3px hsl(var(--primary) / 0.2);
+    --shadow-strong: 0 20px 25px -5px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
 
     /* Smooth professional transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

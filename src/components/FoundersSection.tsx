@@ -13,7 +13,7 @@ export function FoundersSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Palavras dos{" "}
-            <span className="text-accent">
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
               Fundadores
             </span>
           </h2>
@@ -71,14 +71,14 @@ export function FoundersSection() {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto"
         >
-          <div className="bg-card p-6 rounded-xl shadow-soft">
+          <div className="bg-gradient-card p-6 rounded-xl shadow-soft">
             <h3 className="font-bold text-foreground mb-2">Dr. João Ilgenfritz</h3>
             <p className="text-sm text-muted-foreground">
               Membro Titular SBCP | Fellow Cleveland Clinic | 15 anos dedicados ao refinamento cervical
             </p>
           </div>
           
-          <div className="bg-card p-6 rounded-xl shadow-soft">
+          <div className="bg-gradient-card p-6 rounded-xl shadow-soft">
             <h3 className="font-bold text-foreground mb-2">Dr. Daniel Nunes</h3>
             <p className="text-sm text-muted-foreground">
               Membro Especialista SBCP | Mestrado USP | Coordenador Cirurgia Plástica HSL

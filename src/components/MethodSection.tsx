@@ -53,7 +53,7 @@ export function MethodSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             A Filosofia{" "}
-            <span className="text-accent">
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
               LowerLift®
             </span>
           </h2>
@@ -79,7 +79,7 @@ export function MethodSection() {
                   className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300"
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-accent rounded-xl flex items-center justify-center">
+                    <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center">
                       <pillar.icon className="w-8 h-8 text-primary-foreground" />
                     </div>
                     <div>
@@ -124,17 +124,17 @@ export function MethodSection() {
                   <motion.div
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-8 right-8 w-4 h-4 bg-accent/20 rounded-full"
+                    className="absolute top-8 right-8 w-4 h-4 bg-primary/20 rounded-full"
                   />
                   <motion.div
                     animate={{ y: [0, 15, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="absolute bottom-12 left-12 w-6 h-6 bg-accent/15 rounded-full"
+                    className="absolute bottom-12 left-12 w-6 h-6 bg-primary/15 rounded-full"
                   />
                   <motion.div
                     animate={{ y: [0, -8, 0] }}
                     transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                    className="absolute top-1/2 left-8 w-3 h-3 bg-accent/25 rounded-full"
+                    className="absolute top-1/2 left-8 w-3 h-3 bg-primary/25 rounded-full"
                   />
                 </motion.div>
               </div>
@@ -150,7 +150,7 @@ export function MethodSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-accent text-accent-foreground p-8 rounded-2xl max-w-4xl mx-auto">
+          <div className="bg-gradient-primary text-primary-foreground p-8 rounded-2xl max-w-4xl mx-auto">
             <h3 className="text-xl font-semibold text-primary-foreground/90 mb-4 italic">
               "Imagine a cirurgia cervical como a restauração de uma obra de arte. A abordagem superficial é como retocar apenas o verniz. O LowerLift® trabalha na estrutura, restaurando em essência."
             </h3>

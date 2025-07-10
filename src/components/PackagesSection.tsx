@@ -81,7 +81,7 @@ export function PackagesSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Modalidades de{" "}
-            <span className="text-accent">
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
               Mentoria
             </span>
           </h2>
@@ -100,12 +100,12 @@ export function PackagesSection() {
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
               className={`relative bg-card rounded-2xl shadow-soft hover:shadow-strong transition-all duration-300 overflow-hidden ${
-                pkg.popular ? 'ring-2 ring-accent shadow-glow' : ''
+                pkg.popular ? 'ring-2 ring-primary shadow-glow' : ''
               }`}
             >
               {/* Badge */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className={`${pkg.popular ? 'bg-accent' : 'bg-primary/90'} text-accent-foreground px-4 py-1 rounded-full text-sm font-semibold`}>
+                <div className={`${pkg.popular ? 'bg-gradient-primary' : 'bg-primary/90'} text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold`}>
                   {pkg.badge}
                 </div>
               </div>
@@ -114,7 +114,7 @@ export function PackagesSection() {
                 {/* Header */}
                 <div className="text-center mb-8">
                   <div className={`w-16 h-16 mx-auto rounded-xl flex items-center justify-center mb-4 ${
-                    pkg.popular ? 'bg-accent' : 'bg-primary/10'
+                    pkg.popular ? 'bg-gradient-primary' : 'bg-primary/10'
                   }`}>
                     <pkg.icon className={`w-8 h-8 ${
                       pkg.popular ? 'text-primary-foreground' : 'text-primary'
@@ -125,7 +125,7 @@ export function PackagesSection() {
                   <p className="text-muted-foreground mb-4">{pkg.subtitle}</p>
                   
                   <div className="mb-4">
-                    <span className="text-3xl font-bold text-accent">{pkg.price}</span>
+                    <span className="text-3xl font-bold text-primary">{pkg.price}</span>
                     {pkg.priceTag && <span className="text-muted-foreground text-sm ml-2">{pkg.priceTag}</span>}
                   </div>
                 </div>
@@ -159,7 +159,7 @@ export function PackagesSection() {
                   onClick={() => handleWhatsApp(pkg.name)}
                   className={`w-full ${
                     pkg.popular 
-                      ? 'bg-accent hover:shadow-glow' 
+                      ? 'bg-gradient-primary hover:shadow-glow' 
                       : 'bg-primary hover:bg-primary-dark'
                   } transition-all duration-300 text-lg py-6 h-auto group`}
                 >

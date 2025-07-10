@@ -48,7 +48,7 @@ export function TestimonialsSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Testemunhos de{" "}
-            <span className="text-accent">
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
               Transformação
             </span>
           </h2>
@@ -62,10 +62,10 @@ export function TestimonialsSection() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto mb-12"
         >
-          <div className="bg-card p-8 md:p-12 rounded-2xl shadow-medium relative overflow-hidden">
+          <div className="bg-gradient-card p-8 md:p-12 rounded-2xl shadow-medium relative overflow-hidden">
             {/* Quote Icon */}
             <div className="absolute top-6 right-6 opacity-10">
-              <Quote className="w-24 h-24 text-accent" />
+              <Quote className="w-24 h-24 text-primary" />
             </div>
 
             <div className="relative z-10">
@@ -127,7 +127,7 @@ export function TestimonialsSection() {
               viewport={{ once: true }}
               whileHover={{ y: -5, scale: 1.02 }}
               className={`bg-card p-6 rounded-xl shadow-soft hover:shadow-medium transition-all duration-300 cursor-pointer ${
-                index === currentIndex ? 'ring-2 ring-accent' : ''
+                index === currentIndex ? 'ring-2 ring-primary' : ''
               }`}
               onClick={() => setCurrentIndex(index)}
             >
