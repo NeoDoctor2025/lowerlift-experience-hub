@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Play } from "lucide-react";
 import { ContainerTextFlip } from "@/components/ui/container-text-flip";
-import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
