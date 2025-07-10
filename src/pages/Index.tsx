@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 import { ProblemsSection } from "@/components/ProblemsSection";
 import { MethodSection } from "@/components/MethodSection";
 import { PackagesSection } from "@/components/PackagesSection";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
+import AnimatedTestimonialsDemo from "@/components/animated-testimonials-demo";
 import { FAQSection } from "@/components/FAQSection";
 import { FoundersSection } from "@/components/FoundersSection";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -18,7 +18,19 @@ const Index = () => {
         <ProblemsSection />
         <MethodSection />
         <PackagesSection />
-        <TestimonialsSection />
+        <section className="py-20 bg-background" id="testimonials">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Testemunhos de{" "}
+                <span className="bg-gradient-primary bg-clip-text text-transparent">
+                  Transformação
+                </span>
+              </h2>
+            </div>
+            <AnimatedTestimonialsDemo />
+          </div>
+        </section>
         <FAQSection />
         <FoundersSection />
         <FinalCTA />
