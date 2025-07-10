@@ -28,7 +28,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6"
           >
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            LowerLift® Experience by Deep Neck Academy
+            15 anos de excelência em rejuvenescimento cervical
           </motion.div>
 
           {/* Main Headlines */}
@@ -38,21 +38,28 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight"
           >
-            Domine a Arte do{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Rejuvenescimento Cervical
-            </span>{" "}
-            Profundo
+              LowerLift® Experience
+            </span>
           </motion.h1>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-8 font-light max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium max-w-4xl mx-auto"
           >
-            Mentoria Exclusiva com os Criadores do Método LowerLift®
+            O Método Definitivo para sua Evolução na Cirurgia do Rejuvenescimento Cervical Profundo
           </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="text-lg text-muted-foreground mb-8 font-light max-w-3xl mx-auto"
+          >
+            Desenvolva maestria através de uma mentoria personalizada com os criadores do método que revolucionou a abordagem cervical profunda.
+          </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
@@ -66,7 +73,7 @@ export function Hero() {
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-lg px-8 py-4 h-auto group"
               onClick={() => scrollToSection("packages")}
             >
-              Conhecer Modalidades de Mentoria
+              CONHECER AS MODALIDADES
               <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
             </Button>
 
@@ -77,7 +84,7 @@ export function Hero() {
               onClick={() => scrollToSection("method")}
             >
               <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-              Ver Método
+              Assistir Vídeo Institucional
             </Button>
           </motion.div>
 

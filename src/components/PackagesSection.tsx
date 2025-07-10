@@ -4,75 +4,67 @@ import { Check, Star, Crown, Zap } from "lucide-react";
 
 const packages = [
   {
-    name: "Essentials",
+    name: "LowerLift® Essentials",
+    badge: "🥉 FUNDAMENTOS",
     price: "R$ 6.900",
-    duration: "3 dias",
-    description: "Observação direta",
+    subtitle: "Imersão Observacional em Campo Grande",
     icon: Star,
     popular: false,
     features: [
-      "3 dias de observação direta",
-      "Acompanhamento de 8-10 cirurgias",
+      "3 dias intensivos em Campo Grande/MS",
+      "Acompanha 3 cirurgias completas",
+      "Observação direta com os criadores",
       "Material didático exclusivo",
-      "Certificado de participação",
-      "Acesso ao grupo VIP (3 meses)",
-      "1 sessão de mentoria online"
+      "Certificado de Participação",
+      "Grupo de discussão por 30 dias"
     ],
-    highlights: [
-      "Ideal para início da curva de aprendizado",
-      "Foco na observação e compreensão"
-    ]
+    bestFor: "Ideal para: Cirurgiões que querem conhecer profundamente o método",
+    cta: "QUERO ESTA OPÇÃO"
   },
   {
-    name: "Experience",
+    name: "LowerLift® Experience",
+    badge: "🥈 MAIS ESCOLHIDO",
     price: "R$ 11.900",
-    duration: "5 dias",
-    description: "Imersão completa",
+    subtitle: "Jornada Completa com FaceDay® e FaceCare®",
     icon: Crown,
     popular: true,
     features: [
-      "5 dias de imersão total",
-      "Participação ativa em 12-15 cirurgias",
-      "Hands-on supervisionado",
-      "Material didático + vídeos exclusivos",
-      "Certificado internacional",
-      "Acesso ao grupo VIP (6 meses)",
-      "3 sessões de mentoria online",
-      "Kit instrumental básico"
+      "5 dias completos em Campo Grande/MS",
+      "3 cirurgias + consultório + pós",
+      "FaceDay®: dia completo de consultas",
+      "FaceCare®: protocolos pós-operatório",
+      "Scripts de consulta e precificação",
+      "Certificado de Proficiência",
+      "Suporte WhatsApp por 60 dias"
     ],
-    highlights: [
-      "Mais procurado pelos especialistas",
-      "Hands-on com supervisão direta"
-    ]
+    bestFor: "Ideal para: Dominar TODO o processo, da consulta ao pós",
+    cta: "ESCOLHER EXPERIENCE"
   },
   {
-    name: "At Home",
+    name: "LowerLift® At Home",
+    badge: "🥇 EXCLUSIVO",
     price: "R$ 49.900",
-    duration: "Personalizado",
-    description: "Mentoria personalizada in loco",
+    subtitle: "Mentoria Personalizada em Seu Ambiente",
+    priceTag: "por procedimento",
     icon: Zap,
     popular: false,
     features: [
-      "Mentoria personalizada no seu consultório",
-      "Duração customizada (3-7 dias)",
-      "Análise completa da sua estrutura",
-      "Implementação do protocolo LowerLift®",
-      "Treinamento da equipe",
-      "Suporte pós-mentoria (12 meses)",
-      "Certificação para toda equipe",
-      "Kit instrumental completo",
-      "Marketing médico personalizado"
+      "Fundador vai ATÉ VOCÊ",
+      "Mentoria hands-on com SEU paciente",
+      "No SEU centro cirúrgico",
+      "Análise completa da estrutura",
+      "Certificação Gold LowerLift®",
+      "Autorização para co-marketing",
+      "Suporte VIP por 90 dias"
     ],
-    highlights: [
-      "Experiência completamente personalizada",
-      "Implementação no seu ambiente"
-    ]
+    bestFor: "Ideal para: Implementação imediata com máxima segurança",
+    cta: "APLICAR PARA VIP"
   }
 ];
 
 export function PackagesSection() {
   const handleWhatsApp = (packageName: string) => {
-    const message = `Olá! Tenho interesse na modalidade ${packageName} da mentoria LowerLift®. Gostaria de mais informações.`;
+    const message = `Olá! Tenho interesse na modalidade ${packageName}. Gostaria de mais informações.`;
     const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -94,7 +86,7 @@ export function PackagesSection() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Escolha a experiência de aprendizado que melhor se adapta ao seu perfil e necessidades
+            Escolha o Percurso Ideal para Sua Evolução
           </p>
         </motion.div>
 
@@ -111,16 +103,14 @@ export function PackagesSection() {
                 pkg.popular ? 'ring-2 ring-primary shadow-glow' : ''
               }`}
             >
-              {/* Popular Badge */}
-              {pkg.popular && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="bg-gradient-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                    Mais Popular
-                  </div>
+              {/* Badge */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className={`${pkg.popular ? 'bg-gradient-primary' : 'bg-primary/90'} text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold`}>
+                  {pkg.badge}
                 </div>
-              )}
+              </div>
 
-              <div className="p-8">
+              <div className="p-8 pt-12">
                 {/* Header */}
                 <div className="text-center mb-8">
                   <div className={`w-16 h-16 mx-auto rounded-xl flex items-center justify-center mb-4 ${
@@ -132,20 +122,11 @@ export function PackagesSection() {
                   </div>
                   
                   <h3 className="text-2xl font-bold text-foreground mb-2">{pkg.name}</h3>
-                  <p className="text-muted-foreground mb-4">{pkg.description}</p>
+                  <p className="text-muted-foreground mb-4">{pkg.subtitle}</p>
                   
                   <div className="mb-4">
                     <span className="text-3xl font-bold text-primary">{pkg.price}</span>
-                    <span className="text-muted-foreground text-sm ml-2">/ {pkg.duration}</span>
-                  </div>
-
-                  {/* Highlights */}
-                  <div className="space-y-1 mb-6">
-                    {pkg.highlights.map((highlight, hIndex) => (
-                      <p key={hIndex} className="text-xs text-primary font-medium bg-primary/10 px-3 py-1 rounded-full">
-                        {highlight}
-                      </p>
-                    ))}
+                    {pkg.priceTag && <span className="text-muted-foreground text-sm ml-2">{pkg.priceTag}</span>}
                   </div>
                 </div>
 
@@ -168,6 +149,11 @@ export function PackagesSection() {
                   ))}
                 </div>
 
+                {/* Best For */}
+                <div className="bg-primary/5 p-4 rounded-lg mb-6">
+                  <p className="text-sm text-primary font-medium">{pkg.bestFor}</p>
+                </div>
+
                 {/* CTA Button */}
                 <Button
                   onClick={() => handleWhatsApp(pkg.name)}
@@ -177,21 +163,14 @@ export function PackagesSection() {
                       : 'bg-primary hover:bg-primary-dark'
                   } transition-all duration-300 text-lg py-6 h-auto group`}
                 >
-                  Solicitar Informações
-                  <motion.div
-                    className="ml-2"
-                    whileHover={{ scale: 1.2 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    📱
-                  </motion.div>
+                  {pkg.cta}
                 </Button>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Bottom Info */}
+        {/* Footer Note */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -199,28 +178,10 @@ export function PackagesSection() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <div className="bg-card p-6 rounded-xl shadow-soft max-w-3xl mx-auto">
-            <h3 className="text-lg font-semibold text-foreground mb-3">
-              ✨ Benefícios Exclusivos Inclusos em Todas as Modalidades
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-primary" />
-                Suporte pós-curso
-              </span>
-              <span className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-primary" />
-                Material digital exclusivo
-              </span>
-              <span className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-primary" />
-                Grupo VIP WhatsApp
-              </span>
-              <span className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-primary" />
-                Certificado internacional
-              </span>
-            </div>
+          <div className="bg-card p-6 rounded-xl shadow-soft max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground font-medium">
+              Pré-requisito: RQE em Cirurgia Plástica
+            </p>
           </div>
         </motion.div>
       </div>

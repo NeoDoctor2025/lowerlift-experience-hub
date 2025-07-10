@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import { Clock, AlertTriangle, TrendingDown, Frown } from "lucide-react";
+import { Clock, Shield, TrendingUp, Frown } from "lucide-react";
 
 const problems = [
   {
     icon: Clock,
-    title: "Resultados cervicais efêmeros",
-    description: "Técnicas superficiais que não oferecem a durabilidade esperada pelos pacientes"
+    title: "Resultados Efêmeros",
+    description: "Resultados no pescoço que não perduram como esperado, gerando reoperações"
   },
   {
-    icon: AlertTriangle,
-    title: "Insegurança técnica em casos complexos",
-    description: "Falta de domínio em anatomia profunda limita a confiança em procedimentos desafiadores"
+    icon: Shield,
+    title: "Insegurança Técnica",
+    description: "Hesitação ao abordar casos complexos de flacidez cervical acentuada"
   },
   {
-    icon: TrendingDown,
-    title: "Subvalorização dos procedimentos",
-    description: "Dificuldade em precificar adequadamente devido à falta de diferenciação técnica"
+    icon: TrendingUp,
+    title: "Potencial Subaproveitado",
+    description: "A percepção de que poderia cobrar mais se dominasse técnicas avançadas"
   },
   {
     icon: Frown,
-    title: "Frustração com técnicas superficiais",
-    description: "Resultados aquém das expectativas geram insatisfação profissional e dos pacientes"
+    title: "Resultados Incompletos",
+    description: "Frustração quando o rejuvenescimento facial não é acompanhado pelo cervical"
   }
 ];
 
@@ -36,11 +36,11 @@ export function ProblemsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Desafios Enfrentados por{" "}
-            <span className="text-primary">Cirurgiões Plásticos</span>
+            Uma{" "}
+            <span className="text-primary">Reflexão Necessária</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Identificamos os principais obstáculos que limitam o sucesso em rejuvenescimento cervical
+            Como cirurgião, você já deve ter enfrentado estas situações:
           </p>
         </motion.div>
 
@@ -79,11 +79,8 @@ export function ProblemsSection() {
           className="text-center mt-12"
         >
           <div className="bg-gradient-primary text-primary-foreground p-8 rounded-2xl max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">
-              Está Pronto para Superar Esses Desafios?
-            </h3>
-            <p className="text-primary-foreground/90 mb-6">
-              Nossa metodologia LowerLift® foi desenvolvida especificamente para resolver cada um desses problemas
+            <p className="text-primary-foreground/90 text-lg">
+              Se você se identificou com pelo menos duas situações, há uma oportunidade significativa de evolução em sua prática.
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}

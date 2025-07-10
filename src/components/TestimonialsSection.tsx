@@ -4,43 +4,24 @@ import { useState, useEffect } from "react";
 
 const testimonials = [
   {
-    name: "Dr. Carlos Mendes",
-    specialty: "Cirurgião Plástico",
-    location: "São Paulo, SP",
-    rating: 5,
-    text: "O método LowerLift® revolucionou minha prática. Em 6 meses, consegui triplicar meus honorários em procedimentos cervicais. A anatomia profunda que aprendi foi um divisor de águas.",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face"
+    name: "Dr. Fernando Oliveira",
+    specialty: "SBCP - Salvador/BA",
+    text: "Os 3 dias em Campo Grande mudaram minha visão sobre cirurgia cervical. Ver 3 casos diferentes com os criadores do método não tem preço.",
+    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face",
+    rating: 5
   },
   {
-    name: "Dra. Ana Beatriz Silva",
-    specialty: "Cirurgiã Plástica",
-    location: "Rio de Janeiro, RJ",
-    text: "Participei da modalidade Experience e foi a melhor decisão da minha carreira. O hands-on supervisionado me deu a confiança que eu precisava para casos complexos. Resultados impressionantes!",
+    name: "Dra. Patricia Mendes",
+    specialty: "SBCP - Curitiba/PR", 
+    text: "O diferencial foi o FaceDay®. Aprendi a vender o procedimento de forma ética e por valores justos. Triplicou meu faturamento em cervicoplastias.",
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face",
     rating: 5
   },
   {
-    name: "Dr. Roberto Almeida",
-    specialty: "Cirurgião Plástico",
-    location: "Brasília, DF",
-    text: "15 anos de carreira e nunca tinha visto algo tão inovador. A mentoria At Home permitiu implementar o protocolo completo na minha clínica. Meus pacientes notaram a diferença imediatamente.",
+    name: "Dr. Ricardo Santos",
+    specialty: "SBCP - São Paulo/SP",
+    text: "Ter o Dr. João operando COMIGO, no MEU paciente, tirou todas as inseguranças. No dia seguinte já agendei mais 5 casos.",
     image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=150&h=150&fit=crop&crop=face",
-    rating: 5
-  },
-  {
-    name: "Dra. Patricia Lemos",
-    specialty: "Cirurgiã Plástica",
-    location: "Belo Horizonte, MG",
-    text: "O protocolo LowerLift® é incomparável. Durabilidade dos resultados que nunca havia conseguido antes. Minha agenda está sempre lotada e os pacientes indicam constantemente.",
-    image: "https://images.unsplash.com/photo-1594824047540-f2c5fb0e8e3f?w=150&h=150&fit=crop&crop=face",
-    rating: 5
-  },
-  {
-    name: "Dr. Eduardo Santos",
-    specialty: "Cirurgião Plástico",
-    location: "Porto Alegre, RS",
-    text: "Antes do LowerLift®, eu evitava casos cervicais complexos. Hoje, eles são minha especialidade. O método é tão eficaz que tenho lista de espera de 3 meses.",
-    image: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=150&h=150&fit=crop&crop=face",
     rating: 5
   }
 ];
@@ -66,14 +47,11 @@ export function TestimonialsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            O Que Dizem os{" "}
+            Testemunhos de{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Especialistas
+              Transformação
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Depoimentos reais de cirurgiões que transformaram suas práticas com o método LowerLift®
-          </p>
         </motion.div>
 
         {/* Main Featured Testimonial */}
@@ -114,11 +92,8 @@ export function TestimonialsSection() {
                   <h4 className="font-semibold text-foreground">
                     {testimonials[currentIndex].name}
                   </h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-primary">
                     {testimonials[currentIndex].specialty}
-                  </p>
-                  <p className="text-xs text-primary">
-                    {testimonials[currentIndex].location}
                   </p>
                 </div>
               </div>
@@ -142,7 +117,7 @@ export function TestimonialsSection() {
         </div>
 
         {/* All Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -164,7 +139,7 @@ export function TestimonialsSection() {
               </div>
 
               {/* Text */}
-              <p className="text-muted-foreground text-sm mb-4 line-clamp-4">
+              <p className="text-muted-foreground text-sm mb-4">
                 "{testimonial.text}"
               </p>
 
@@ -179,7 +154,7 @@ export function TestimonialsSection() {
                   <h5 className="font-medium text-foreground text-sm">
                     {testimonial.name}
                   </h5>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-xs text-primary">
                     {testimonial.specialty}
                   </p>
                 </div>
@@ -187,34 +162,6 @@ export function TestimonialsSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">98%</div>
-              <div className="text-sm text-muted-foreground">Taxa de Satisfação</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">Cirurgiões Treinados</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">15+</div>
-              <div className="text-sm text-muted-foreground">Anos de Experiência</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">2000+</div>
-              <div className="text-sm text-muted-foreground">Procedimentos</div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

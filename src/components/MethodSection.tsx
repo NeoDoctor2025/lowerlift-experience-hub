@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Brain, Target, Trophy } from "lucide-react";
+import { Brain, Target, Clock } from "lucide-react";
 
 const pillars = [
   {
     icon: Brain,
-    title: "Anatomia Profunda",
+    title: "I. Maestria Anatômica Profunda",
     subtitle: "Domínio de estruturas negligenciadas",
-    description: "Compreensão detalhada das camadas musculares e fasciais do pescoço, permitindo intervenções precisas em estruturas frequentemente ignoradas por técnicas convencionais.",
+    description: "O domínio de estruturas negligenciadas por 95% dos profissionais - a chave para resultados verdadeiramente duradouros.",
     features: [
       "Mapeamento detalhado das camadas cervicais",
       "Identificação de pontos-chave anatômicos",
@@ -16,9 +16,9 @@ const pillars = [
   },
   {
     icon: Target,
-    title: "Protocolo Refinado",
+    title: "II. Precisão Metodológica",
     subtitle: "15 anos, 2000+ procedimentos",
-    description: "Metodologia desenvolvida através de anos de pesquisa e prática clínica, refinada com base em mais de 2000 procedimentos realizados com sucesso.",
+    description: "Um protocolo com 15 anos de evolução, refinado em mais de 2000 procedimentos, garantindo consistência e reprodutibilidade.",
     features: [
       "Sequência padronizada de procedimentos",
       "Técnicas de sutura específicas",
@@ -27,10 +27,10 @@ const pillars = [
     ]
   },
   {
-    icon: Trophy,
-    title: "Resultados Duradouros",
+    icon: Clock,
+    title: "III. Longevidade Comprovada",
     subtitle: "Satisfação que transcende",
-    description: "Resultados que perduram por anos, proporcionando satisfação genuína tanto para o cirurgião quanto para o paciente, com taxa de reoperação mínima.",
+    description: "Resultados duradouros com melhor definição cervical. Uma satisfação que transcende expectativas de pacientes e cirurgiões.",
     features: [
       "Durabilidade superior a 10 anos",
       "Taxa de satisfação > 95%",
@@ -52,13 +52,13 @@ export function MethodSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Os 3 Pilares do{" "}
+            A Filosofia{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Método LowerLift®
+              LowerLift®
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Uma abordagem revolucionária baseada em ciência, experiência e resultados comprovados
+            Os Três Fundamentos que Redefinem a Excelência
           </p>
         </motion.div>
 
@@ -150,21 +150,10 @@ export function MethodSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-muted p-8 rounded-2xl max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Pronto para Dominar o Método LowerLift®?
+          <div className="bg-gradient-primary text-primary-foreground p-8 rounded-2xl max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold text-primary-foreground/90 mb-4 italic">
+              "Imagine a cirurgia cervical como a restauração de uma obra de arte. A abordagem superficial é como retocar apenas o verniz. O LowerLift® trabalha na estrutura, restaurando em essência."
             </h3>
-            <p className="text-muted-foreground mb-6">
-              Escolha a modalidade de mentoria que melhor se adapta às suas necessidades
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:shadow-glow transition-all duration-300"
-            >
-              Ver Modalidades de Mentoria
-            </motion.button>
           </div>
         </motion.div>
       </div>
